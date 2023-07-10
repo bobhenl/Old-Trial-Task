@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/register.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body>
+
+    <div class="left-container">
+        <div class="logo-container">
+            <img src="/static/content/logo.svg">
+        </div>
+
+        <div class="welcome-container">
+            <h1>WELCOME</h1>
+            <div class="horizontal-line"></div>
+            <p>Sign in to continue access</p>
+        </div>
+
+        <div class="bottom-container">
+            <p>www.example.com</p>
+        </div>
+    </div>
+
+    <div class="right-container">
+        <img src="/static/content/logo.svg" class="logo-bw">
+
+        <form action="/register" method="post">
+            <h2>Sign In</h2>
+            <span class="error-msg">{{ error_msg }}</span>
+            <input type="email" name="email" placeholder="Email Address" required>
+            <input type="password" name="password" placeholder="Password" required>
+            <input type="password" name="password_repeat" placeholder="Repeat Password" required>
+
+            <button type="submit">CONTINUE</button>
+
+            <p>or connect with Social Media</p>
+
+            <button type="button" class="twitter-btn"><img src="/static/content/twitter.svg"> Sign In With Twitter</button>
+            <button type="button" class="facebook-btn"><img src="/static/content/facebook.svg"> Sign In With Facebook</button>
+
+            <span class="bottom-text">Already have an account? <a href="">Log in</a></span>
+
+        </form>
+    </div>
+</body>
+</html>

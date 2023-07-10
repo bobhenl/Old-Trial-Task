@@ -1,0 +1,200 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Lato', sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+
+    .left-container {
+        justify-content: space-between;
+        display: flex;
+        flex-direction: column;
+        background-image: url(/static/content/background.svg);
+        background-size: cover;
+        background-position: center;
+        height: 100vh;
+        width: 100%;
+        padding: 40px;
+
+        .logo-container{
+            width: 100%;
+
+            img {
+                height: 40px;
+            }
+        }
+
+
+        .welcome-container {
+            width: fit-content;
+            margin: auto;
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            gap: 5px;
+
+            h1 {
+                letter-spacing: 5px;
+                color: #fff;
+                font-weight: 700;
+            }
+
+            .horizontal-line {
+                background-color: #fff;
+                width: 100%;
+                height: 1px;
+            }
+
+            p {
+                color: #fff;
+                font-weight: 400;
+                letter-spacing: 1px;
+
+            }
+        }
+
+        .bottom-container {
+
+            p {
+                color: #fff;
+            }
+        }
+    }
+    .right-container {
+        position: relative;
+        background-color: #fff;
+        height: 100vh;
+        width: 100%;
+        padding: 40px;
+        min-width: fit-content;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        .logo-bw {
+            top: 40px;
+            left: 40px;
+            position: absolute;
+            height: 40px;
+            filter: brightness(0);
+            display: none;
+        }
+
+
+        form {
+            padding-top: 100px;
+
+            h2 {
+                color: #161616;
+                font-weight: 700;
+                font-size: 28px;
+                margin-bottom: 50px;
+            }
+
+            .error-msg {
+                color: red;
+            }
+
+            width: 100%;
+            height: fit-content;
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            max-width: 400px;
+            gap: 10px;
+
+            input {
+                margin-top: 10px;
+                outline: none;
+                padding: 10px 0px;
+                width: 100%;
+                border: none;
+                border-bottom: solid 2px #5606FF;
+            }
+
+            button[type='submit'] {
+                color: #fff;
+                letter-spacing: 3px;
+                cursor: pointer;
+                margin-top: 25px;
+                height: fit-content;
+                width: 100%;
+                padding: 15px;
+                background: linear-gradient(90deg, #8B14E9 0%, #ED0AD6 100%);
+                border: none;
+                margin-bottom: 10px;
+                transition: 0.2s;
+            }
+            button[type='button'] {
+                color: #fff;
+                cursor: pointer;
+                height: fit-content;
+                width: 100%;
+                padding: 15px;
+                border: none;
+                transition: 0.2s;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 10px;
+
+                img {
+                    height: 20px;
+                    width: 20px;
+                }
+            }
+            .twitter-btn {
+                background: linear-gradient(90deg, #149CE9 0%, #00D1FF 100%);
+            }
+            .facebook-btn {
+                background: linear-gradient(90deg, #1450E9 0%, #0A8EED 100%);
+            }
+            button:active {
+                transform: scale(0.97);
+            }
+
+            p {
+                margin-top: 10px;
+                margin-bottom: 10px;
+                color: #ABABAB;
+            }
+
+            .bottom-text{
+                color: #ABABAB;
+                margin-top: 100px;
+
+                a {
+                    text-decoration: none;
+                    color: #F39609;
+                }
+            }
+
+        }
+
+
+
+    }   
+}
+
+
+@media (max-width: 800px) {
+    .left-container {
+        display: none !important;
+    }
+
+    .right-container {
+        padding: 30px !important;
+
+        .logo-bw {
+            display: flex !important;
+        }
+    }
+}
